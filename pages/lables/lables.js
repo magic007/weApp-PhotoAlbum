@@ -11,13 +11,13 @@ Page({
     loading: false,
     windowHeight: 0,
     windowWidth: 0,
-    limit: 80,
+    limit: 10,
     diaryList: [],
     modifyDiarys: false
   },
-  onLoad: function (e) {
+  onLoad: function () {
     that = this;
-console.log(e);
+
   },
   noneWindows:function(){
     that.setData({
@@ -25,17 +25,23 @@ console.log(e);
           modifyDiarys: ""
         })
   },
-  onShow: function (e) {
-    console.log(e);
-    var Diary = Bmob.Object.extend("album");
+  gotoAblum:function(e){
+    var id = e.currentTarget.id;
+    console.log(e,id);
+wx.switchTab({  
+      url: '/pages/index/index',  
+      success: function (e) {  
+        var page = getCurrentPages().pop();  
+        if (page == undefined || page == null) return;  
+        page.onShow(id);  
+      }  
+    })
+  },
+  onShow: function () {
+    var Diary = Bmob.Object.extend("labels");
     var query = new Bmob.Query(Diary);
     query.descending('createdAt');
-    if(e){
-    var where = {"__type":"Pointer","className":"labels","objectId":e}
-    query.equalTo("lid", where);
-    }
-    query.equalTo("hidden",true);
-    // query.lid="t9YQ3338";
+    query.include("own")
     // 查询所有数据
     query.limit(that.data.limit);
     query.find({

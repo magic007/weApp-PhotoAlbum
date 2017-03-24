@@ -71,7 +71,7 @@
     };
 
     // Set the server for Bmob to talk to.
-    Bmob.serverURL = "https://apitest.bmob.cn";
+    Bmob.serverURL = "https://api.bmob.cn";
     Bmob.fileURL = "http://file.bmob.cn";
 
     // Check whether we are running in Node.js.
@@ -241,6 +241,7 @@
                 }
             });
         } else {
+            wx.showNavigationBarLoading()
             wx.request({
                 method: method,
                 url: url,
@@ -249,6 +250,7 @@
                     'content-type': 'text/plain'
                 },
                 success: function (res) {
+                    wx.hideNavigationBarLoading()
                     if (res.data && res.data.code) {
                         promise.reject(res);
                     } else if (res.statusCode != 200) {
@@ -259,6 +261,7 @@
                     }
                 },
                 fail: function (e) {
+                    wx.hideNavigationBarLoading()
                     promise.reject(e);
                 }
             });

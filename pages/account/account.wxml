@@ -1,25 +1,2 @@
-<import src="../../style/footer.wxml" />
-<view class="page">
-  <view class="page__hd i-header">
-    <view class="g-bd">
-      <view> </view>
-      <view class="g-bda">
-        <view bindtap="" class="g-bda-userinfo">
-          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
-          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </view>
-      </view>
-    </view>
-  </view>
-  <view class="page__bd">
-  </view>
-  <view class="btn-area">
-    <navigator url="feedback/feedback" hover-class="navigator-hover">
-      <button type="default">反馈建议</button>
-    </navigator>
-     <navigator url="" bindtap="about" hover-class="navigator-hover">
-      <button type="default">关于本程序</button>
-    </navigator>
-  </view>
-  <template is="foot" />
-</view>
+<!--pages/account/account.wxml-->
+<text>pages/account/account.wxml</text>

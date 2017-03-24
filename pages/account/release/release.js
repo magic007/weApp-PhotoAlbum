@@ -1,4 +1,4 @@
-// pages/account/account.js
+// pages/account/release/release.js
 Page({
   data:{},
   onLoad:function(options){

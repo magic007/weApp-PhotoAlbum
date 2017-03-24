@@ -1,0 +1,7 @@
+.weui-grid{
+  width:50%;
+}
+.weui-grid__icon{
+  width:180px;
+  height: 150px;
+}
