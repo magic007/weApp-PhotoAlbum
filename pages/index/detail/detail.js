@@ -13,7 +13,7 @@ Page({
     windowWidth: 0,
     limit: 100,
     diaryList: [],
-    hidden:0,
+    hidden:1,
     modifyDiarys: false
     
   },

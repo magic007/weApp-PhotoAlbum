@@ -66,7 +66,7 @@ Page({
           var newDate = new Date();
           var newDateStr = newDate.toLocaleDateString();
 
-          for (var i = 0; i < imgLength; i++) {
+          for (var i = imgLength-1; i >0 ; i--) {
             console.log(i);
             var tempFilePath = [tempFilePaths[i]];
             var extension = /\.([^.]*)$/.exec(tempFilePath[0]);

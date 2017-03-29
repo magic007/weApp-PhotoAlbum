@@ -1,6 +1,6 @@
 //app.js
 var Bmob = require('utils/bmob.js')
-Bmob.initialize("f846871f5f5d0e4af6c0860fa3587a2e", "aca53ca3807d379ba38abfa69720ee9c");
+Bmob.initialize("8f4ec8d5087f2e0d33958189c0f888c9", "5347f17650576e065d6eb647d6e5a0fc");
 
 
 App({

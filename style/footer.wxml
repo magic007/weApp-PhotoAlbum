@@ -1,7 +1,7 @@
 <template name="foot">
   <view class="page__bd page__bd_spacing">
     <view class="weui-footer weui-footer_fixed-bottom">
-      <view class="weui-footer__text">Copyright © 2013-2016 蜂鸟Park</view>
+      <view class="weui-footer__text">Copyright © 2013-2016 看景区</view>
     </view>
   </view>
 </template>

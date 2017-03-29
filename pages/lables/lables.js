@@ -38,7 +38,7 @@ wx.switchTab({
     })
   },
   onShow: function () {
-    var Diary = Bmob.Object.extend("labels");
+    var Diary = Bmob.Object.extend("local");
     var query = new Bmob.Query(Diary);
     query.descending('createdAt');
     query.include("own")
